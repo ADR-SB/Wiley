@@ -1,0 +1,87 @@
+1. Open a new file named avengers in your home directory in your editor and paste in the following text:
+
+Six stones, three teams, one shot. Five years ago, we lost. All of us. We lost friends. We lost family. We lost a part of ourselves. Today, we have a chance to take it all back. You know your teams. You know your missions. Get the stones. Get them back. One round trip each. No mistakes. No do-overs. Most of us are going somewhere we know. that doesn't mean we should know what to expect. Be careful. Look out for each other. This is the fight of our lives, and we're gonna win. Whatever it takes. Good luck.
+
+* vi avengers
+* press insert
+* copy and paste the text
+
+2. Exit and save the file.
+
+* press Esc to exit
+* :wq! 
+* press Enter
+
+3. Run a word count on the file.
+
+wc avengers
+
+4. Edit the file to add a blank line and type in "word count" followed by the value you just got.
+
+* vi avengers
+* press G to go to eof
+* press o to add new line and enter insert mode
+* type word count 98
+
+5. Now use search and replace within the editor to replace every instance of the word the with THE. Ensure that you only catch the word the and not words that contain the letters the (like them).
+
+* press Esc
+* type :%s/\<the\>/THE/g
+* press Enter
+
+6. Copy the first line of the file and paste it after your word count entry at the bottom of the file.
+
+* Press gg to go to the first line.
+* Press yy to copy the line.
+* Press G to go to the eof.
+* Press p to paste the line.
+
+7. Delete the first line of the file.
+
+* press gg
+* press dd to delete
+
+8. Undo that deletion.
+
+* press u
+
+9. Insert at the top of the file the text "Captain America – Endgame" followed by an empty line.
+
+* press gg
+* press O
+* enter Captain America - Endgame
+
+10. Save the changes and exit the editor.
+
+* press Esc
+* type :wq!
+* press Enter
+
+11. Find out the number of lines in the file now.
+
+wc -l ~/avengers
+
+12. Write the number of lines into the file one line above the word count with the text "line count" plus the value.
+
+* vi avengers
+* press Esc
+* press G
+* press k
+* press O
+* type line count 5
+
+13. Delete "Good luck" wherever it occurs in the file.
+
+* press Esc
+* type :%s/Good luck//g
+* press Enter
+
+14. Save and exit the file
+
+* press esc
+* type :wq!
+*press Enter
+
+15. Submit a file named avengers.<yourname>.txt that includes the contents of this file.
+
+cp avengers avengers.Adarsh.txt
